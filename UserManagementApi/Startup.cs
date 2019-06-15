@@ -34,6 +34,7 @@ namespace UserManagementApi
         {
             // add DBContext classes
             var sqlConnectionString = Configuration.GetConnectionString("UserManagementCN");
+            
             services.AddDbContext<UserManagementDBContext>(options => options.UseSqlServer(sqlConnectionString));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerDocument();

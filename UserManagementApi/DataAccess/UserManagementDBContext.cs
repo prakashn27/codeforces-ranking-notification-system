@@ -14,10 +14,10 @@ namespace UserManagementApi.DataAccess
 
         public DbSet<User> Users { get; set; }
 
+        
         protected override void OnModelCreating(ModelBuilder builder) {
             builder.Entity<User>().HasKey(m => m.UserId);
-            builder.Entity<User>().ToTable("User");
-            builder.Entity<User>().Property(u => u.Name).IsRequired();
+            builder.Entity<User>().ToTable("UserTable");
             base.OnModelCreating(builder);
         }
 

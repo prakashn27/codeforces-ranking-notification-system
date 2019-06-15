@@ -21,11 +21,10 @@ namespace UserManagementApi.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult> Get()
         {
-            return new string[] { "value1", "VALUE2" };
-            // return Ok(await _dbContext.Users);
-            
+            // return new string[] { "value1", "VALUE2" };
+            return Ok(await _dbContext.Users.ToListAsync());   
         }
 
         // GET api/values/5
