@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using UserManagementApi.Models;
+using UserManagementApi.DataAccess;
+using Microsoft.EntityFrameworkCore;
+using System.Data.Sql;
 
 namespace UserManagementApi.Controllers
 {
@@ -10,11 +15,17 @@ namespace UserManagementApi.Controllers
     [ApiController]
     public class userController : ControllerBase
     {
+        UserManagementDBContext _dbContext;
+        public userController(UserManagementDBContext dbContext) {
+            _dbContext = dbContext;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "VALUE2" };
+            // return Ok(await _dbContext.Users);
+            
         }
 
         // GET api/values/5

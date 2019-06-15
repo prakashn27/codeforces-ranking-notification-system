@@ -4,7 +4,7 @@ using UserManagementApi.Models;
 using Polly;
 using System;
 
-namespace UserManagementApi
+namespace UserManagementApi.DataAccess
 {  
     public class UserManagementDBContext : DbContext
     {
@@ -12,11 +12,12 @@ namespace UserManagementApi
 
         }
 
-        public DbSet<User> Customers { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) {
             builder.Entity<User>().HasKey(m => m.UserId);
             builder.Entity<User>().ToTable("User");
+            builder.Entity<User>().Property(u => u.Name).IsRequired();
             base.OnModelCreating(builder);
         }
 

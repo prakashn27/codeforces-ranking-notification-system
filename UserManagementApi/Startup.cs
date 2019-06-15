@@ -13,6 +13,10 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using NJsonSchema;
 using NSwag.AspNetCore;
+using UserManagementApi.DataAccess;
+using AutoMapper;
+using UserManagementApi.Commands;
+using UserManagementApi.Models;
 
 namespace UserManagementApi
 {
@@ -51,6 +55,17 @@ namespace UserManagementApi
             app.UseOpenApi();
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            // // setup automapper
+            // Mapper.Initialize(cfg =>
+            // {
+            //     cfg.CreateMap<RegisterUser, User>();
+            //     cfg.CreateMap<User, RegisterUser>()
+            //         .ForCtorParam("messageId", opt => opt.MapFrom(c => Guid.NewGuid()));
+            //     cfg.CreateMap<RegisterUser, CustomerRegistered>()
+            //         .ForCtorParam("messageId", opt => opt.MapFrom(c => Guid.NewGuid()));
+            // });
+            
         }
     }
 }
