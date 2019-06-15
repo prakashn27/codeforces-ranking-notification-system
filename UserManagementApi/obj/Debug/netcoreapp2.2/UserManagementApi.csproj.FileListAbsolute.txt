@@ -1,0 +1,14 @@
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/bin/Debug/netcoreapp2.2/UserManagementApi.deps.json
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/bin/Debug/netcoreapp2.2/UserManagementApi.runtimeconfig.json
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/bin/Debug/netcoreapp2.2/UserManagementApi.runtimeconfig.dev.json
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/bin/Debug/netcoreapp2.2/UserManagementApi.dll
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/bin/Debug/netcoreapp2.2/UserManagementApi.pdb
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.csprojAssemblyReference.cache
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.csproj.CoreCompileInputs.cache
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.RazorAssemblyInfo.cache
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.RazorAssemblyInfo.cs
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.AssemblyInfoInputs.cache
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.AssemblyInfo.cs
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.RazorTargetAssemblyInfo.cache
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.dll
+/Users/prakashn/Documents/gitHub/codeforces-ranking-notification-system/UserManagementApi/obj/Debug/netcoreapp2.2/UserManagementApi.pdb
