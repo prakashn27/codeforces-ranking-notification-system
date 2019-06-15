@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <AssemblyName>UserManagementApi</AssemblyName>
+    <RootNamespace>UserManagementApi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

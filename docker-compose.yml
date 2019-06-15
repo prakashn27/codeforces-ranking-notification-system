@@ -40,6 +40,17 @@ services:
     environment:
       - ACCEPT_EULA=Y 
 
+  usermanagementapi:
+    image: prakashnatarajan/usermanagementapi:latest
+    build: UserManagementApi
+    container_name: usermanagementapi
+    depends_on: 
+      - sqlserver
+    ports:
+      - "5100:5100"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
 volumes:
   sqlserverdata:
     external: true    
