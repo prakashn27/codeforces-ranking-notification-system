@@ -15,6 +15,7 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using UserManagementApi.DataAccess;
 using AutoMapper;
+using Microsoft.Extensions.HealthChecks;
 using UserManagementApi.Commands;
 using UserManagementApi.Models;
 
@@ -38,6 +39,7 @@ namespace UserManagementApi
             services.AddDbContext<UserManagementDBContext>(options => options.UseSqlServer(sqlConnectionString));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerDocument();
+            services.AddHealthChecks(checks => checks.WithDefaultCacheDuration(TimeSpan.FromSeconds(1)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

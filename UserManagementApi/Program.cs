@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace UserManagementApi
 {
@@ -19,6 +20,9 @@ namespace UserManagementApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseSerilog()
+                .UseHealthChecks("/hc")
+                .UseStartup<Startup>()
+                ;
     }
 }
