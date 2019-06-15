@@ -7,7 +7,8 @@ using System.Data;
 using UserManagementApi.Models;
 using UserManagementApi.DataAccess;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Sql;
+using UserManagementApi.Commands;
+using AutoMapper;
 
 namespace UserManagementApi.Controllers
 {
@@ -29,27 +30,62 @@ namespace UserManagementApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult> Get(string id)
         {
-            return "value";
+            var customer = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == id);
+            if (customer == null)
+            {
+                return NotFound();
+            }
+            return Ok(customer);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] User user)
         {
+            // insert customer
+            // User user = Mapper.Map<User>(command);
+            _dbContext.Users.Add(user);
+            await _dbContext.SaveChangesAsync();
+
+            // send event
+            // UserRegistered e = Mapper.Map<UserRegistered>(command);
+            // await _messagePublisher.PublishMessageAsync(e.MessageType, e, "");
+
+            // return result
+            // return CreatedAtRoute("GetByCustomerId", new { UserId = user.UserId }, user);
+            // return Ok(await Get(user.UserId));
+            return Ok();
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        // // PUT api/values/5
+        // [HttpPut("{id}")]
+        // public void Put(int id, [FromBody] string value)
+        // {
+        // }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(string id)
         {
+            var user = await _dbContext.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                _dbContext.Users.Remove(user);
+                await _dbContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.)
+                return NotFound();
+            }
         }
     }
 }

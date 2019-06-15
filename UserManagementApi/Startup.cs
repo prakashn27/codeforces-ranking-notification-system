@@ -58,14 +58,12 @@ namespace UserManagementApi
             app.UseMvc();
 
             // // setup automapper
-            // Mapper.Initialize(cfg =>
-            // {
-            //     cfg.CreateMap<RegisterUser, User>();
-            //     cfg.CreateMap<User, RegisterUser>()
-            //         .ForCtorParam("messageId", opt => opt.MapFrom(c => Guid.NewGuid()));
-            //     cfg.CreateMap<RegisterUser, CustomerRegistered>()
-            //         .ForCtorParam("messageId", opt => opt.MapFrom(c => Guid.NewGuid()));
-            // });
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<RegisterUser, User>();
+                cfg.CreateMap<User, RegisterUser>()
+                    .ForCtorParam("messageId", opt => opt.MapFrom(c => Guid.NewGuid()));
+            });
             
         }
     }
