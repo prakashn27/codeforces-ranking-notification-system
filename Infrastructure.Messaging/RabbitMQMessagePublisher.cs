@@ -46,7 +46,7 @@ namespace Pitstop.Infrastructure.Messaging
                         {
                             using (var model = connection.CreateModel())
                             {
-                                model.ExchangeDeclare(_exchange, "fanout", durable: true, autoDelete: false);
+                                model.ExchangeDeclare(_exchange, "direct", durable: true, autoDelete: false);
                                 string data = MessageSerializer.Serialize(message);
                                 var body = Encoding.UTF8.GetBytes(data);
                                 IBasicProperties properties = model.CreateBasicProperties();
