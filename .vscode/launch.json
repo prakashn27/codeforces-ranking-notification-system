@@ -5,7 +5,7 @@
    "version": "0.2.0",
    "configurations": [
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Run Usermanagementapi",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -27,10 +27,18 @@
             }
         },
         {
-            "name": ".NET Core Attach",
+            "name": "Run FollowerManagementApi",
             "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
-        }
+            "request": "launch",
+            // "preLaunchTask": "build",
+            "program": "${workspaceFolder}/FollowerManagementApi/bin/Debug/netcoreapp2.2/FollowerManagementApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FollowerManagementApi/bin/Debug/netcoreapp2.2",
+            "stopAtEntry": false,
+            "console": "externalTerminal",
+            "env": {
+                "DOTNET_ENVIRONMENT": "Development"
+            }
+        },
     ]
 }

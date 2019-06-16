@@ -6,7 +6,7 @@
 version: '3'
 services:
 
-  UserManagementApi:
+  usermanagementapi:
     ports:
       - "5000:5000"
 

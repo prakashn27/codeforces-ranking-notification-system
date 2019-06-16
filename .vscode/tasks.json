@@ -7,7 +7,17 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/UserManagementApi/UserManagementApi.csproj"
+                "${workspaceFolder}/FollowerManagementApi/FollowerManagementApi.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "build FollowerManagementApi",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/FollowerManagementApi/FollowerManagementApi.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -17,7 +27,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/UserManagementApi/UserManagementApi.csproj"
+                "${workspaceFolder}/FollowerManagementApi/FollowerManagementApi.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -28,7 +38,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/UserManagementApi/UserManagementApi.csproj"
+                "${workspaceFolder}/FollowerManagementApi/FollowerManagementApi.csproj"
             ],
             "problemMatcher": "$tsc"
         }

@@ -50,6 +50,17 @@ services:
       - "5100:5100"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
+  
+  followermanagementapi:
+    image: prakashnatarajan/followermanagementapi:latest
+    build: FollowerManagementApi
+    container_name: followermanagementapi
+    depends_on: 
+      - sqlserver
+    ports:
+      - "5200:5200"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
 
 volumes:
   sqlserverdata:
