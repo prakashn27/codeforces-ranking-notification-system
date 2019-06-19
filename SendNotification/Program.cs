@@ -9,13 +9,13 @@ namespace SendNotification
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Starting Send Notification service!");
             while(true) {
                 var factory = new ConnectionFactory() { HostName = "localhost", UserName = "rabbitmquser", Password = "DEBmbwkSrzy9D1T9cJfa" };
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "Rank",
+                    channel.QueueDeclare(queue: "Notification",
                                          durable: true,
                                          exclusive: false,
                                          autoDelete: false,
@@ -28,7 +28,7 @@ namespace SendNotification
                         var message = Encoding.UTF8.GetString(body);
                         Console.WriteLine(" [x] Received {0}", message);
                     };
-                    channel.BasicConsume(queue: "Rank",
+                    channel.BasicConsume(queue: "Notification",
                                          autoAck: true,
                                          consumer: consumer);
 
