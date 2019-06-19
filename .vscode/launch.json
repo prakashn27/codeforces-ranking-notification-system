@@ -4,6 +4,73 @@
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
    "configurations": [
+       {
+        "name": "Run SendNotification",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        // If you have changed target frameworks, make sure to update the program path.
+        "program": "${workspaceFolder}/SendNotification/bin/Debug/netcoreapp2.2/SendNotification.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/SendNotification",
+        "stopAtEntry": false,
+        // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+        "serverReadyAction": {
+            "action": "openExternally",
+            "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "sourceFileMap": {
+            "/Views": "${workspaceFolder}/Views"
+        }
+    },
+       {
+        "name": "Run CreateNotification",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        // If you have changed target frameworks, make sure to update the program path.
+        "program": "${workspaceFolder}/CreateNotification/bin/Debug/netcoreapp2.2/CreateNotification.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/CreateNotification",
+        "stopAtEntry": false,
+        // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+        "serverReadyAction": {
+            "action": "openExternally",
+            "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "sourceFileMap": {
+            "/Views": "${workspaceFolder}/Views"
+        }
+    },
+
+        {
+            "name": "Run ParseContestApi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/ParseContestApi/bin/Debug/netcoreapp2.2/ParseContestApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ParseContestApi",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
         {
             "name": "Run Usermanagementapi",
             "type": "coreclr",
@@ -40,5 +107,19 @@
                 "DOTNET_ENVIRONMENT": "Development"
             }
         },
+        {
+            "name": "Run AuditLogService",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AuditlogService/bin/Debug/netcoreapp2.2/AuditlogService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AuditlogService/bin/Debug/netcoreapp2.2",
+            "stopAtEntry": false,
+            "console": "externalTerminal",
+            "env": {
+                "DOTNET_ENVIRONMENT": "Development"
+            }
+        }
     ]
 }

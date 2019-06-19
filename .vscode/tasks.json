@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/FollowerManagementApi/FollowerManagementApi.csproj"
+                "${workspaceFolder}/SendNotification/SendNotification.csproj"
             ],
             "problemMatcher": "$tsc"
         },
