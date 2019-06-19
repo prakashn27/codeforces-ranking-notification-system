@@ -51,7 +51,7 @@ namespace ParseContestApi.Controllers
                     foreach(ChangedRank cr in cfRanks.Result) {
                         var body = Encoding.UTF8.GetBytes(JsonSerializer.SerializeToString<ChangedRank>(cr));
                         channel.BasicPublish(exchange: "Ranker",
-                                         routingKey: "",
+                                         routingKey: "Rank",
                                          basicProperties: null,
                                          body: body);
                         Console.WriteLine(" [x] Sent {0}", cr.Handle);
