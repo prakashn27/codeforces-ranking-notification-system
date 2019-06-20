@@ -4,7 +4,7 @@ This is a sample project which is used to learn more about Asp.Net core 2.2. It 
 * Notify if there is a change in rank of our friends
 * Out of scope: Authentication, UI
 
-### Architecture Diagram
+## Architecture Diagram
 ![Architecture Diagram](https://user-images.githubusercontent.com/3127498/59861206-5be55880-934e-11e9-917c-18ad333a12db.png)
 
 ## Overview of Architecture:
@@ -32,6 +32,6 @@ This is a sample project which is used to learn more about Asp.Net core 2.2. It 
 * [usermanagementapi](https://hub.docker.com/r/prakashnatarajan/usermanagementapi)
 * [followermanagementapi](https://hub.docker.com/r/prakashnatarajan/followermanagementapi)
 
-## Tutorials:
+## Videos worth watching:
 * [Intro to rabbitmq](https://www.youtube.com/watch?v=deG25y_r6OY)
 * [Edwin Van Wijk talk on .net core Architecture](https://www.youtube.com/watch?v=-AfZxdXa7yc&t=734s)
