@@ -24,7 +24,8 @@ This is a sample project which is used to learn more about Asp.Net core 2.2. It 
 1. To debug individual project, stop that particular project using `docker-compose stop {projectname}`. 
 2. Run the project in development mode, using visual studio code.
 
-## QuickLinks
+## QuickLinks after starting the project:
+Following links are enabled after starting the project. 
 * [RabbitMQ web](http://localhost:15672/#/)
 * [MailDev](http://localhost:4000/#/)
 
