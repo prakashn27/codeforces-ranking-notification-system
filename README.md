@@ -17,6 +17,13 @@ This is a sample project which is used to learn more about Asp.Net core 2.2. It 
 * `CreateNotification` gets the each user in rank queue and creates a notification for all of its followers and updates it to `Notification` queue.
 * `SendNotification` fetches the data from `Notification` queue and sends mail for each notification.
 
+## Run
+`./StartSolution.sh` starts all the projects currently from docker compose.
+
+## Debug
+1. To debug individual project, stop that particular project using `docker-compose stop {projectname}`. 
+2. Run the project in development mode, using visual studio code.
+
 ## QuickLinks
 * [RabbitMQ web](http://localhost:15672/#/)
 * [MailDev](http://localhost:4000/#/)
